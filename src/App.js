@@ -1,11 +1,13 @@
 import React from 'react';
+import PostList from './components/Post/PostList';
+import PostContextProvider from './contexts/PostContext';
 import './dist/css/style.min.css';
 
 const App = () => {
 	return (
-		<>
-			<h1>OpenBlog</h1>
-		</>
+		<PostContextProvider>
+			<PostList />
+		</PostContextProvider>
 	);
 };
 
