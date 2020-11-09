@@ -7,7 +7,7 @@ const Navbar = () => {
 	return (
 		<div className='navbar'>
 			<div className='container grid'>
-				<NavLogo logo='OpenBlog' />
+				<NavLogo />
 				<Navlinks />
 				<NavAuthBtns />
 			</div>

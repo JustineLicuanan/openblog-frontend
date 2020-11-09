@@ -3,9 +3,13 @@
 
 // Navbar
 .navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
 	background-color: $primaryColor;
 	color: $primaryBgcTextColor;
-	height: 70px;
+	height: $navbarHeight;
 }
 
 .navbar .grid {
@@ -15,6 +19,7 @@
 
 .navbar h1 {
 	justify-self: flex-start;
+	margin: 10px;
 }
 
 .navbar nav ul {
@@ -41,9 +46,55 @@
 	margin: 10px;
 }
 
+// Blog
+.blog h1 a,
+.blog h5 a {
+	color: $primaryColor;
+}
+
 .blog h1 a:hover,
 .blog h5 a:hover {
-	border-bottom: 2px $darkColor solid;
+	border-bottom: 2px $primaryColor solid;
+}
+
+// Post
+.post .container {
+	max-width: 740px;
+}
+
+.post .card {
+	min-height: 400px;
+}
+
+.post h1 {
+	font-size: 40px;
+}
+
+.post h5 a {
+	color: $primaryColor;
+}
+
+.post h5 a:hover {
+	border-bottom: 2px $primaryColor solid;
+}
+
+// Footer
+.footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: $primaryColor;
+	color: $primaryBgcTextColor;
+	height: $footerHeight;
+}
+
+.footer a {
+	color: $secondaryColor;
+}
+
+.footer a:hover {
+	border-bottom: 2px $secondaryColor solid;
 }
 
 @import './utilities';

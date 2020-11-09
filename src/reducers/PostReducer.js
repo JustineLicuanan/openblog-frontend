@@ -3,8 +3,8 @@ const PostReducer = (state, action) => {
 		case 'CREATE_POST':
 			return [...state, action.post];
 		case 'UPDATE_POST':
-			return state.map((post) => {
-				if (post.id === action.id)
+			return state.map((post, index) => {
+				if (index === action.index)
 					Object.keys(action.updates).forEach((key) => {
 						post[key] = action.updates[key];
 					});

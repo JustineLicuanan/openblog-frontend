@@ -1,12 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useContext } from 'react';
+import { SettingContext } from '../../contexts/SettingContext';
 
-const NavLogo = ({ logo }) => {
-	return <h1 className='logo'>{logo}</h1>;
-};
+const NavLogo = () => {
+	const { settings } = useContext(SettingContext);
 
-NavLogo.propTypes = {
-	logo: PropTypes.string.isRequired,
+	return <h1 className='logo'>{settings.title}</h1>;
 };
 
 export default NavLogo;
