@@ -5,11 +5,15 @@ import PostItem from './PostItem';
 const PostList = () => {
 	const { posts } = useContext(PostContext);
 	return (
-		<ul>
-			{posts.map((post) => (
-				<PostItem key={post.id} post={post} />
-			))}
-		</ul>
+		<div className='blog'>
+			<div className='container'>
+				<ul className='grid'>
+					{posts.map((post) => (
+						<PostItem key={post.id} post={post} />
+					))}
+				</ul>
+			</div>
+		</div>
 	);
 };
 

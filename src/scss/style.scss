@@ -1,1 +1,49 @@
+@import './variables';
 @import './reboot';
+
+// Navbar
+.navbar {
+	background-color: $primaryColor;
+	color: $primaryBgcTextColor;
+	height: 70px;
+}
+
+.navbar .grid {
+	grid-template-columns: 1.8fr repeat(2, 1fr);
+	gap: 40px;
+}
+
+.navbar h1 {
+	justify-self: flex-start;
+}
+
+.navbar nav ul {
+	justify-content: space-between;
+}
+
+.navbar a {
+	color: $primaryBgcTextColor;
+}
+
+.navbar nav a {
+	padding: 10px;
+}
+
+.navbar nav a:hover {
+	border-bottom: 2px $primaryBgcTextColor solid;
+}
+
+.navbar .grid > ul {
+	justify-content: space-between;
+}
+
+.navbar .grid > ul .btn {
+	margin: 10px;
+}
+
+.blog h1 a:hover,
+.blog h5 a:hover {
+	border-bottom: 2px $darkColor solid;
+}
+
+@import './utilities';
