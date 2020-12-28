@@ -1,0 +1,22 @@
+@import '../../../scss/variables';
+
+.container {
+	max-width: 800px;
+	margin: 10px auto;
+	padding: 0 10px;
+}
+
+.goBackBtn {
+	display: inline-block;
+	padding: 10px 30px;
+	cursor: pointer;
+	background-color: $primaryColor;
+	color: $primaryTextColor;
+	border: none;
+	border-radius: 5px;
+	margin: 10px 0;
+
+	&:hover {
+		transform: scale(0.98);
+	}
+}

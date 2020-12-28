@@ -7,7 +7,9 @@ const Navbar = () => {
 			<div className={`${classes.container} ${classes.flex}`}>
 				<Link href='/'>
 					<a>
-						<h1>{process.env.NEXT_PUBLIC_SITE_NAME}</h1>
+						<h3 className={classes.logo}>
+							{process.env.NEXT_PUBLIC_SITE_NAME}
+						</h3>
 					</a>
 				</Link>
 			</div>

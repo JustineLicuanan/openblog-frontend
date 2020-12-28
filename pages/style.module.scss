@@ -1,3 +1,5 @@
+@import '../scss/variables';
+
 .container {
 	max-width: 800px;
 	margin: 10px auto;
@@ -16,7 +18,30 @@
 	margin: 10px 10px 20px;
 }
 
+.meta {
+	margin: 0 0 10px;
+}
+
 .content {
 	text-align: justify;
+}
+
+.title {
+	color: $primaryColor;
+	margin: 10px 0 0;
+}
+
+.readMoreBtn {
+	display: inline-block;
+	padding: 10px 30px;
+	cursor: pointer;
+	background-color: $primaryColor;
+	color: $primaryTextColor;
+	border: none;
+	border-radius: 5px;
 	margin-bottom: 10px;
+
+	&:hover {
+		transform: scale(0.98);
+	}
 }

@@ -7,7 +7,7 @@ import html from 'remark-html';
 export interface PostData {
 	id: string;
 	title: string;
-	date: Date;
+	date: string;
 	author: string;
 	contentHtml: string;
 }
@@ -67,3 +67,12 @@ export const getPostData = async (id: string) => {
 		...matterResult.data,
 	} as PostData;
 };
+
+export function getAllPostIds() {
+	const fileNames = fs.readdirSync(postsDirectory);
+	return fileNames.map((fileName) => ({
+		params: {
+			id: fileName.replace(/\.md$/, ''),
+		},
+	}));
+}
